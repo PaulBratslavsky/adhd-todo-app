@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notes",
+  "info": {
+    "singularName": "note",
+    "pluralName": "notes",
+    "displayName": "Note",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "dueDate": {
+      "type": "datetime"
+    },
+    "priority": {
+      "type": "enumeration",
+      "enum": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5"
+      ]
+    },
+    "consequenceDescription": {
+      "type": "richtext"
+    },
+    "consequenceLevel": {
+      "type": "enumeration",
+      "enum": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ]
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    }
+  }
+}
